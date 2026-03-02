@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barbershop ABC | Grooming Premium</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:#0b0b0b;
+  color:#fff;
+  overflow-x:hidden;
+}
+
+/* NAV */
+nav{
+  position:fixed;
+  width:100%;
+  padding:20px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(0,0,0,0.7);
+  backdrop-filter:blur(10px);
+  z-index:999;
+}
+
+nav h1{
+  font-family:'Playfair Display',serif;
+  color:#d4af37;
+  letter-spacing:2px;
+}
+
+nav a{
+  color:#fff;
+  margin-left:25px;
+  text-decoration:none;
+  transition:.3s;
+}
+
+nav a:hover{
+  color:#d4af37;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  background:
+  linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.85)),
+  url('https://images.unsplash.com/photo-1621605815971-fbc98d665033') center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  padding:0 8%;
+}
+
+.hero-content{
+  max-width:650px;
+  animation:fadeUp 1.2s ease forwards;
+}
+
+.hero h2{
+  font-family:'Playfair Display',serif;
+  font-size:60px;
+  margin-bottom:20px;
+}
+
+.hero span{
+  color:#d4af37;
+}
+
+.hero p{
+  color:#ccc;
+  margin-bottom:30px;
+}
+
+.btn{
+  padding:14px 35px;
+  background:#d4af37;
+  color:#000;
+  font-weight:600;
+  text-decoration:none;
+  border-radius:5px;
+  transition:.3s;
+}
+
+.btn:hover{
+  background:#fff;
+}
+
+/* SECTION */
+section{
+  padding:100px 8%;
+}
+
+.section-title{
+  font-family:'Playfair Display',serif;
+  font-size:40px;
+  text-align:center;
+  margin-bottom:60px;
+  color:#d4af37;
+}
+
+/* SERVICES */
+.service-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.service-box{
+  background:#111;
+  padding:40px;
+  border-radius:12px;
+  transition:.4s;
+}
+
+.service-box:hover{
+  transform:translateY(-10px);
+  background:#181818;
+}
+
+.service-box h3{
+  color:#d4af37;
+  margin-bottom:15px;
+}
+
+/* GALLERY */
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+
+.gallery-grid img{
+  width:100%;
+  height:300px;
+  object-fit:cover;
+  border-radius:14px;
+  transition:.5s;
+  filter:brightness(90%);
+}
+
+.gallery-grid img:hover{
+  transform:scale(1.08);
+  filter:brightness(110%);
+}
+
+/* INFO */
+.info-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+}
+
+.info-box h3{
+  color:#d4af37;
+  margin-bottom:20px;
+}
+
+.info-box p{
+  margin-bottom:10px;
+  color:#ccc;
+}
+
+.map iframe{
+  width:100%;
+  height:350px;
+  border:none;
+  border-radius:12px;
+}
+
+.cta{
+  text-align:center;
+  background:linear-gradient(to right,#000,#1a1a1a);
+}
+
+.cta h2{
+  font-family:'Playfair Display',serif;
+  font-size:40px;
+  margin-bottom:20px;
+}
+
+footer{
+  padding:40px 8%;
+  background:#000;
+  text-align:center;
+  color:#777;
+}
+
+.wa{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  padding:15px 18px;
+  border-radius:50px;
+  color:#fff;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(40px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+@media(max-width:900px){
+  .info-grid{
+    grid-template-columns:1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <h1>Barbershop ABC</h1>
+  <div>
+    <a href="#layanan">Layanan</a>
+    <a href="#galeri">Galeri</a>
+    <a href="#kontak">Kontak</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <h2>Potongan Presisi Untuk <span>Pria Modern</span></h2>
+    <p>Barbershop premium dengan barber profesional dan suasana eksklusif.</p>
+    <a href="https://wa.me/6281338693093" target="_blank" class="btn">Booking Sekarang</a>
+  </div>
+</section>
+
+<section id="layanan">
+  <h2 class="section-title">Layanan Kami</h2>
+  <div class="service-grid">
+    <div class="service-box">
+      <h3>Haircut Premium</h3>
+      <p>Potongan detail sesuai bentuk wajah dan gaya Anda.</p>
+    </div>
+    <div class="service-box">
+      <h3>Beard Styling</h3>
+      <p>Rapikan dan bentuk jenggot dengan presisi tinggi.</p>
+    </div>
+    <div class="service-box">
+      <h3>Hair Coloring</h3>
+      <p>Warna elegan dan modern untuk tampilan berbeda.</p>
+    </div>
+  </div>
+</section>
+
+<section id="galeri">
+  <h2 class="section-title">Galeri Interior & Hasil</h2>
+  <div class="gallery-grid">
+    <img src="https://images.unsplash.com/photo-1517832606294-6d6f1a6a5e7e" alt="">
+    <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70" alt="">
+    <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f" alt="">
+    <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a" alt="">
+  </div>
+</section>
+
+<section id="kontak">
+  <h2 class="section-title">Informasi & Lokasi</h2>
+  <div class="info-grid">
+    <div class="info-box">
+      <h3>Jam Operasional</h3>
+      <p>Senin - Jumat : 10.00 - 21.00</p>
+      <p>Sabtu : 09.00 - 22.00</p>
+      <p>Minggu : 09.00 - 20.00</p>
+
+      <h3 style="margin-top:30px;">Alamat</h3>
+      <p>Jl. Contoh No.123, Kota Anda</p>
+      <p>Indonesia</p>
+
+      <a href="https://wa.me/6281338693093" target="_blank" class="btn" style="margin-top:20px; display:inline-block;">Chat WhatsApp</a>
+    </div>
+
+    <div class="map">
+      <iframe src="https://maps.google.com/maps?q=jakarta&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Siap Tampil Lebih Percaya Diri?</h2>
+  <a href="https://wa.me/6281338693093" target="_blank" class="btn">Booking Sekarang</a>
+</section>
+
+<footer>
+  © 2026 Barbershop ABC. All Rights Reserved.
+</footer>
+
+<a href="https://wa.me/6281338693093" target="_blank" class="wa">WA</a>
+
+</body>
+</html>
